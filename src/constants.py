@@ -1,0 +1,6 @@
+TITLE = "Animal Defense!"
+
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 600
+
+FPS = 60
