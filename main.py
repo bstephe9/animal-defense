@@ -14,7 +14,7 @@ class Game:
         self.running = True
         
         # load sprites
-        self.background = pg.image.load(r"data\backgrounds\environment_forestbackground1.png")
+        self.background = pg.image.load(r"data/backgrounds/environment_forestbackground1.png")
 
 
     def new(self):
