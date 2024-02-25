@@ -2,6 +2,7 @@ import os
 import pygame as pg
 
 from src.constants import *
+from src.round import Round
 
 class Game:
     def __init__(self):
@@ -13,13 +14,12 @@ class Game:
         self.clock = pg.time.Clock()
         self.running = True
         
-        # load sprites
-        self.background = pg.image.load(r"data/backgrounds/environment_forestbackground1.png")
+        self.all_sprites = pg.sprite.Group()
 
 
     def new(self):
         self.show_start_screen()
-        self.all_sprites = pg.sprite.Group()
+        self.round = Round(self.all_sprites)
         self.run()
         self.show_game_over_screen()
 
@@ -63,7 +63,6 @@ def main():
     g = Game()
     while g.running:
         g.new()
-        g.show_game_over_screen()
         
     pg.quit()
         
